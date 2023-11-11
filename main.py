@@ -28,6 +28,8 @@ while game_is_on:
         score.clear()
         score.update_score()
         score.new_score += 1
-
+    if snake.head.xcor()>280 or snake.head.xcor()<-280 or snake.head.ycor()>280 or snake.head.ycor()<-280:
+        game_is_on = False
+        score.game_over()
 screen.exitonclick()
 
